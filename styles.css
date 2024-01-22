@@ -1,0 +1,141 @@
+nav{
+    background: #402B3A;
+    display: grid;
+    grid-template: 1fr/1fr 2fr 3fr 1fr;
+    gap: 10px;
+}
+nav > *{
+    display: flex;
+    align-items: center; 
+    font-family: serif;
+    justify-content: center;
+}
+
+nav img{
+    width: 35px;
+}
+nav div:nth-child(2){
+    color: white;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+#hamburger-menu{
+    grid-area: 1/4/2/5;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    align-content: flex-end;
+    justify-content: center;  
+}
+
+#hamburger-menu > *{
+    background: white;
+    height: 2px;
+    width: 50%;
+    
+}
+#menu-box{
+    background: #F8F4EC;
+    height: 60vh;
+    width: 80vw;
+    position: relative;
+    left: 20vw;
+    display: none;
+    z-index: 1;
+    box-shadow: -60px 60px 60px #402B3A;
+}
+#menu-box ul{
+    list-style-type: circle;
+    
+}
+#menu-box li{
+    margin: 0 0 20px 0;
+}
+#menu-box a{
+    font-size: 1.5em;
+    padding: 0.2em;
+    background: #402B3A;
+    border-radius: 3px;
+    color: white;
+    text-decoration: none;
+}
+#background{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 85vh;
+    background-image: url("./images/background-image.jpg");
+    background-attachment: fixed;
+}
+#background p{
+    width: 60vw;
+    font-family: cursive;
+    font-size: 2em;
+    text-align: center;
+    font-weight: 900;
+    background: #F8F4EC96;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    
+}
+
+section{
+    background: #F8F4EC;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    width: 90%;
+    margin: 20px 5% 20px 5%;
+    align-items: center;
+  
+    
+}
+section h1{
+    font-family: serif;
+}
+section p{
+    text-align: justify;
+    padding: 10px;
+}
+footer{
+    background: #402B3A;
+    color: white;
+    padding: 20px;
+}
+#contact-links{
+    display: flex;
+}
+#contact-links > *{
+    margin: 20px 20px 20px 0;
+}
+#contact-links svg path{
+    fill: white;
+}
+
+footer a{
+    text-decoration: none;
+    color: yellow;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+figure img{
+    width: 100%;
+    border-radius: 30px;
+}  
+#page{
+    position: absolute;
+    top:5em;
+}
+
+/*for js manipulations
+*/
+
+.no-scroll{
+    overflow-y: hidden;
+}
+.scroll{
+    overflow-y: scroll;
+}
