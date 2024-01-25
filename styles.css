@@ -1,8 +1,14 @@
+html{
+    font-size: 2.5rem;
+}
+
 nav{
     background: #402B3A;
     display: grid;
-    grid-template: 1fr/1fr 2fr 3fr 1fr;
+    grid-template: 1fr/1fr 3fr 2fr 1fr;
     gap: 10px;
+    height: 4em;
+    padding: 20px 0 20px 0;
 }
 nav > *{
     display: flex;
@@ -12,7 +18,7 @@ nav > *{
 }
 
 nav img{
-    width: 35px;
+    width: 100px;
 }
 nav div:nth-child(2){
     color: white;
@@ -44,13 +50,15 @@ nav div:nth-child(2){
     display: none;
     z-index: 1;
     box-shadow: -60px 60px 60px #402B3A;
+    padding-top: 20px;
+    overflow: hidden;
 }
 #menu-box ul{
     list-style-type: circle;
     
 }
 #menu-box li{
-    margin: 0 0 20px 0;
+    margin: 0 0 50px 0;
 }
 #menu-box a{
     font-size: 1.5em;
@@ -64,7 +72,7 @@ nav div:nth-child(2){
     display: flex;
     justify-content: center;
     align-content: center;
-    height: 85vh;
+    height: 100vh;
     background-image: url("./images/background-image.jpg");
     background-attachment: fixed;
 }
@@ -78,7 +86,8 @@ nav div:nth-child(2){
     border-radius: 30px;
     display: flex;
     align-items: center;
-    
+    height: auto;
+    padding: 5%;
 }
 
 section{
@@ -87,37 +96,41 @@ section{
     flex-direction: column;
     border-radius: 30px;
     width: 90%;
-    margin: 20px 5% 20px 5%;
+    margin: 40px 5% 40px 5%;
     align-items: center;
   
     
 }
 section h1{
     font-family: serif;
+    text-align: center;
 }
 section p{
     text-align: justify;
-    padding: 10px;
+    padding: 30px 10% 30px 10%;
 }
 footer{
     background: #402B3A;
     color: white;
-    padding: 20px;
+    padding: 30px 5% 30px 5%;
 }
 #contact-links{
     display: flex;
 }
 #contact-links > *{
-    margin: 20px 20px 20px 0;
+    margin: 40px 80px 40px 0;
 }
 #contact-links svg path{
     fill: white;
 }
+#contact-links svg{
+    height: 40px;
+    width: 40px;
+}
 
 footer a{
-    text-decoration: none;
+    text-decoration: underline;
     color: yellow;
-    font-size: 1.2em;
     font-weight: 500;
 }
 
@@ -127,7 +140,30 @@ figure img{
 }  
 #page{
     position: absolute;
-    top:5em;
+    top: calc(4em + 50px);
+}
+/*for mobile*/
+@media (max-width: 480px){
+    html{
+        font-size: 3rem;
+    }
+    svg{
+
+    }
+}
+
+/*for tablets*/
+@media (min-width: 481) and (max-width: 768){
+    html{
+        font-size: 2rem;
+    }
+}
+
+/*for laptops and desktops*/
+@media (min-width: 769){
+    html{
+        font-size: 1.5rem;
+    }
 }
 
 /*for js manipulations

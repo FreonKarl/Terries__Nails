@@ -40,27 +40,28 @@ function removeMenuBox(){
     var menuBoxWidth = getComputedStyle(menuBox).getPropertyValue("width");
 
     //converting width and left values to floats
-    menuBoxWidth = menuBoxWidth.slice(0, menuBoxWidth.length - 2)
-    menuBoxLeft = menuBoxLeft.slice(0, menuBoxLeft.length - 2)
     menuBoxWidth = parseFloat(menuBoxWidth)
     menuBoxLeft = parseFloat(menuBoxLeft)
 
-    //storing original position of menuBox
+    //storing original position and size of menuBox
     var menuBoxOriginalLeft = menuBoxLeft
-
+    var menuBoxOriginalWidth = menuBoxWidth
     //slide menuBox to the right until it disappears
     var intervalId = setInterval(function() {
+        menuBoxWidth -=10
         menuBoxLeft += 10;
+        menuBox.style.width = menuBoxWidth + "px"
         menuBox.style.left = menuBoxLeft + "px";
-        if(menuBoxLeft - menuBoxOriginalLeft >= menuBoxWidth){
+        if(menuBoxWidth <= 0){
             clearInterval(intervalId);
 
             //restores menuBox original position after disappearance
             menuBox.style.display = "none";
+            menuBox.style.width = menuBoxOriginalWidth + "px"
             menuBox.style.left = menuBoxOriginalLeft + "px";
         }
 
-    }, 1);
+    }, 10);
     
 }
 
@@ -137,6 +138,7 @@ function scrollControl(){
         console.log("here")
     }
 }
+
 
 //Event listeners:
 
